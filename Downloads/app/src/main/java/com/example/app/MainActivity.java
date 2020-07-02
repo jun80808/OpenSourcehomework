@@ -1,4 +1,4 @@
-package com.example.cpuwatch;
+package com.example.app;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,7 +8,7 @@ import android.os.Message;
 import android.util.Log;
 import android.widget.TextView;
 
-import com.example.opensourcehomework_hongsikbae.R;
+import com.example.app.R;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
