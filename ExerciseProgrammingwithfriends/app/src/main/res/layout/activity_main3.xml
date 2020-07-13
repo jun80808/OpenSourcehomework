@@ -4,6 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity2">
+    tools:context=".MainActivity3">
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:id="@+id/zerom"
+        android:name="com.example.exerciseprogrammingwithfriends.MainActivity4"/>
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
