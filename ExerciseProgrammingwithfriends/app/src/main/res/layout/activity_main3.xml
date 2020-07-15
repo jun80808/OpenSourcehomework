@@ -4,11 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity3">
-    <fragment
+    <com.google.android.material.tabs.TabLayout
         android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:id="@+id/zerom"
-        android:name="com.example.exerciseprogrammingwithfriends.MainActivity4"/>
+        android:layout_height="120dp"
+        android:id="@+id/tablayout3"/>
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewpager3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+</LinearLayout>

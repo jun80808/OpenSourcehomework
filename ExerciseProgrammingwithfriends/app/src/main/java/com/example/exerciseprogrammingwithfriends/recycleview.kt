@@ -6,12 +6,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.activity.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.activity_recycleview.*
 import kotlinx.android.synthetic.main.recycleview2.*
 
 class recycleview : AppCompatActivity() {
+    private val viewModel:MyViewModel by viewModels()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_recycleview)
@@ -38,6 +40,7 @@ class nameadapter(
     }
 
     override fun getItemCount(): Int {
+        return itemlist.size
     }
 
     override fun onBindViewHolder(holder: nameadapter.ViewHolder, position: Int) {
