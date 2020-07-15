@@ -26,6 +26,7 @@ class recycleview : AppCompatActivity() {
         recycle.adapter=adapter
         recycle.layoutManager = LinearLayoutManager(this)
     }
+
 }
 class nameadapter(
     val itemlist: ArrayList<sample6data>,
@@ -47,6 +48,10 @@ class nameadapter(
         holder.title.setText(itemlist[position].title)
         holder.description.setText(itemlist[position].description)
     }
+    val adapter = nameadapter(MyViewModel, LayoutInflater.from(this))
+    recycler_view.adapter = adapter
+    recycler_view.layoutManager = LinearLayoutManager(this)
+
 }
 class sample6data(
     val title : String?="",
