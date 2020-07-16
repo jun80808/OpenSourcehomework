@@ -4,10 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".recycleview">
+
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/recycle"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toTopof="parent"/>
 
 </LinearLayout>
