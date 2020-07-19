@@ -5,31 +5,28 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.Observer
 import android.widget.TextView
 import androidx.activity.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.activity_recycleview.*
-import kotlinx.android.synthetic.main.recycleview2.*
 
 class recycleview : AppCompatActivity() {
-    private val viewModel:MyViewModel by viewModels()
+    val viewModel:MyViewModel by viewModels()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_recycleview)
-        var data =ArrayList<sample6data>()
-        for (a in 0 until   10) {
-            val hong = sample6data(""+a,""+a)
-            data.add(hong)
-        }
-        val adapter = nameadapter(data, LayoutInflater.from(this))
-        recycle.adapter=adapter
-        recycle.layoutManager = LinearLayoutManager(this)
-    }
+        viewModel.mydata()
+
+
+        val adapter = nameadapter(viewModel.data, LayoutInflater.from(this))
+        recycler_view.adapter = adapter
+        recycler_view.layoutManager = LinearLayoutManager(this)
 
 }
 class nameadapter(
-    val itemlist: ArrayList<sample6data>,
+    val itemlist: ArrayList<items>,
     val inflater: LayoutInflater
 ) : RecyclerView.Adapter<nameadapter.ViewHolder>() {
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view){
@@ -48,13 +45,4 @@ class nameadapter(
         holder.title.setText(itemlist[position].title)
         holder.description.setText(itemlist[position].description)
     }
-    val adapter = nameadapter(MyViewModel, LayoutInflater.from(this))
-    recycler_view.adapter = adapter
-    recycler_view.layoutManager = LinearLayoutManager(this)
-
-}
-class sample6data(
-    val title : String?="",
-    val description : String ?=""){
-
 }

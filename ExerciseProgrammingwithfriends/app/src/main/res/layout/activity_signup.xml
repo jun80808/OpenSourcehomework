@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Signup">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="회원가입 하세요!"
+        android:textSize="40dp"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="50dp"
+        android:text="비밀번호 못 찾습니다 까먹으면"
+        android:textSize="24dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:text="아이디"
+        android:textSize="30dp"/>
+
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="5dp"
+        android:background="#7FFFD4"
+        android:hint="아이디를 입력하세요"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
+        android:text="비밀번호"
+        android:textSize="30dp"/>
+
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="#7FFFD4"
+        android:hint="비밀번호를 입력하세요" />
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="100dp"
+        android:hint="회원가입"
+        android:textSize="30dp"/>
+
+
+
+
+
+</LinearLayout>

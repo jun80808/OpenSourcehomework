@@ -1,20 +1,21 @@
 package com.example.exerciseprogrammingwithfriends
 
+import android.content.ClipData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
 class MyViewModel: ViewModel() {
-    val data =ArrayList<sample6data>()
-    val Livedata = MutableLiveData<ArrayList<sample6data>>()
+    val listdata =ArrayList<items>()
+    val Livedata = MutableLiveData<ArrayList<items>>()
 
 
     fun mydata() {
-        data.clear()
-        for (i in 0 until 10) {
-            val sampledata = sample6data("" + i, "" + i)
-            data.add(sampledata)
+        listdata.clear()
+        for (i in 0 until 40) {
+            val sampledata = items("" + i, "" + i)
+            items.add(sampledata)
         }
-        Livedata.value = data
+        Livedata.value = listdata
 
     }
 }

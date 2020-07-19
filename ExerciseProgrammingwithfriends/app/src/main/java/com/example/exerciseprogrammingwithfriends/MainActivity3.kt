@@ -11,10 +11,14 @@ import kotlinx.android.synthetic.main.activity_main3.*
 import kotlinx.android.synthetic.main.custom_tab.view.*
 
 class MainActivity3 : AppCompatActivity() {
+// ...
+// Initialize Firebase Auth
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main3)
         initView()
+                // ...
+            }
     }
     fun createView(tabName:String): View {
         val tabView = LayoutInflater.from(this).inflate(R.layout.custom_tab, null)
